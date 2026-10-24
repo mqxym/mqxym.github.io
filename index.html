@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Maxims Links
+    </title>
+    <meta charset="utf-8">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maxims Links">
+    <meta property="og:description" content="Maxims Homepage. Links to all relevant media.">
+    <meta property="og:image" content="assets/profile-picture">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="assets/favicon.ico">
+    <link href="assets/profiles/themes/css/base.css" rel="stylesheet">
+    <link href="assets/profiles/themes/css/minimal.css" rel="stylesheet">
+    <style>
+    .u-photo {
+    border-radius: 50% !important;
+    box-shadow: 0 8px 50px rgba(0, 0, 0, 0.4);
+    }
+    .quote {
+    font-style:italic !important;
+    }
+    </style>
+    
+<meta name="description" content="Social Media Links">
+  <meta name="keywords" content="mqxym, mqx">
+  <meta name="author" content="Maxim">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WF5BXF9LEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WF5BXF9LEN');
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById("bio");
+    
+    const elements = container.querySelectorAll("p,h2,h3");
+    
+    const texts = Array.from(elements).map(element => element.textContent.trim());
+
+    elements.forEach(element => {
+      element.textContent = "";
+    });
+    
+    let currentElementIndex = 0;
+    let currentCharIndex = 0;
+    
+    function type() {
+      if (currentElementIndex >= elements.length) {
+        return;
+      }
+      if (currentElementIndex == 0) {
+        elements[currentElementIndex].classList.add('quote');
+      }
+
+      const element = elements[currentElementIndex];
+      const text = texts[currentElementIndex];
+      if (currentCharIndex < text.length) {
+        element.appendChild(document.createTextNode(text.charAt(currentCharIndex)));
+        currentCharIndex++;
+        
+        setTimeout(type, Math.random()*10+35);
+      } else {
+        currentElementIndex++;
+        currentCharIndex = 0;
+        setTimeout(type, 250);
+      }
+    }
+    type();
+  });
+</script>
+
+  </head>
+  <body>
+    <main class="h-card">
+      <div id="profile-picture-container">
+        <img class="u-photo" alt="maxim" id="profile-picture" src="assets/profile-picture">
+      </div>
+      <h1 class="p-name" id="name">
+        🏝️ Maxim <a id="verification" style="text-decoration: none; border: 0;" href="https://home.omg.lol/lookup/maxim"><i class="omg-icon omg-verified"></i></a>
+      </h1>
+      <div class="metadata" id="pronouns">
+        he/him
+      </div>
+      <div class="metadata p-job-title" id="occupation">
+        <i class="fa-solid fa-fw fa-briefcase"></i> Systems Engineering
+      </div>
+      <div class="metadata p-region" id="location">
+        <i class="fa-solid fa-fw fa-location-dot"></i> Germany
+      </div>
+      <div class="p-note" id="bio">
+        <p>
+          * omg lol you found my profile? *
+        </p>
+        <h2>Welcome!</h2>
+        <p>
+          I'm interested in new technologies, coding, vinyl, strategy games, music production and hip-hop.
+        </p>
+        <blockquote>
+          <h3>
+            Fly around the world on a beat is what I really want.
+          </h3>
+        </blockquote>
+        <p>
+          Visit my Spotify, YouTube or Soundcloud for my music. Check out my GitHub for my coding projects.
+        </p>
+        <p>
+          Messages for ideas, questions or other inquiries on any platform are much appreciated :)
+        </p>
+      </div>
+      <div id="profile-items">
+        <h3>
+          Music
+        </h3>
+        <ul class="fa-ul">
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-spotify"></i></span><a class="u-url" rel="me" href="https://open.spotify.com/user/wobblecontact?si=t5d_UHB0THeQjDfllYIS2A&amp;dl_branch=1">Spotify</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-soundcloud"></i></span><a class="u-url" rel="me" href="https://www.soundcloud.com/mqxym?ref=clipboard&amp;p=i&amp;c=1&amp;utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing">Soundcloud</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-youtube"></i></span><a class="u-url" rel="me" href="https://www.youtube.com/@mQxYm">Youtube</a>
+          </li>
+        </ul>
+        <h3>
+          Coding
+        </h3>
+        <ul class="fa-ul">
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-github"></i></span><a class="u-url" rel="me" href="https://github.com/mqxym">Github</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-solid fa-link"></i></span><a class="u-url" rel="me" href="https://pastebin.com/u/mqxym">Pastebin</a>
+          </li>
+        </ul>
+        <h3>
+          Socials
+        </h3>
+        <ul class="fa-ul">
+          <li>
+            <span class="fa-li"><i class="fa-solid fa-link"></i></span><a class="u-url" rel="me" href="https://ask.fm/mqxym8?utm_source=copy_link&amp;utm_medium=iOS&amp;shareBy=mqxym8">Ask.FM</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-instagram"></i></span><a class="u-url" rel="me" href="https://www.instagram.com/mqxym">Instagram</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="omg-icon omg-x-com"></i></span><a class="u-url" rel="me" href="https://x.com/mqxym77">X</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-tiktok"></i></span><a class="u-url" rel="me" href="www.tiktok.com/@mqxym9999">TikTok</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-facebook"></i></span><a class="u-url" rel="me" href="https://www.facebook.com/maxim.schulz.zb">Facebook</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-snapchat"></i></span><a class="u-url" rel="me" href="https://www.snapchat.com/add/meinhouse?share_id=MDNCODc3&amp;locale=de_DE">Snapchat</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-telegram"></i></span><a class="u-url" rel="me" href="https://t.me/mqxym">Telegram</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-reddit"></i></span><a class="u-url" rel="me" href="https://www.reddit.com/u/Wackelkontakt/">Reddit</a>
+          </li>
+        </ul>
+        <h3>
+          Gaming
+        </h3>
+        <ul class="fa-ul">
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-discord"></i></span><a class="u-url" rel="me" href="https://discordapp.com/users/1221089003932225667">Discord</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-steam"></i></span><a class="u-url" rel="me" href="https://steamcommunity.com/id/mqxym/">Steam</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-twitch"></i></span><a class="u-url" rel="me" href="https://www.twitch.tv/m69x96m">Twitch</a>
+          </li>
+        </ul>
+        <h3>
+          More Socials
+        </h3>
+        <ul class="fa-ul">
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-quora"></i></span><a class="u-url" rel="me" href="https://www.quora.com/profile/Mqxym">Quora</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-medium"></i></span><a class="u-url" rel="me" href="https://medium.com/@mqxym">Medium</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="omg-icon omg-giphy"></i></span><a class="u-url" rel="me" href="https://giphy.com/channel/mqxym">Giphy</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-solid fa-link"></i></span><a class="u-url" rel="me" href="https://imgur.com/user/mqxym">Imgur</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a rel="me" class="u-email" href="mailto:maxim@omg.lol">maxim@omg.lol</a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer"></div>
+    </main>
+  </body>
+</html>
