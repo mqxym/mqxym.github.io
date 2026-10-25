@@ -9,79 +9,43 @@
     <meta property="og:title" content="Maxims Links">
     <meta property="og:description" content="Maxims Homepage. Links to all relevant media.">
     <meta property="og:image" content="assets/profile-picture">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <link rel="icon" href="assets/favicon.ico">
     <link href="assets/profiles/themes/css/base.css" rel="stylesheet">
     <link href="assets/profiles/themes/css/minimal.css" rel="stylesheet">
-    <style>
-    .u-photo {
-    border-radius: 50% !important;
-    box-shadow: 0 8px 50px rgba(0, 0, 0, 0.4);
-    }
-    .quote {
-    font-style:italic !important;
-    }
-    </style>
+    <script src="assets/theme.js"></script>
     
 <meta name="description" content="Social Media Links">
   <meta name="keywords" content="mqxym, mqx">
   <meta name="author" content="Maxim">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WF5BXF9LEN"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FHP95DKDL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-WF5BXF9LEN');
+  gtag('config', 'G-8FHP95DKDL');
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const container = document.getElementById("bio");
-    
-    const elements = container.querySelectorAll("p,h2,h3");
-    
-    const texts = Array.from(elements).map(element => element.textContent.trim());
-
-    elements.forEach(element => {
-      element.textContent = "";
-    });
-    
-    let currentElementIndex = 0;
-    let currentCharIndex = 0;
-    
-    function type() {
-      if (currentElementIndex >= elements.length) {
-        return;
-      }
-      if (currentElementIndex == 0) {
-        elements[currentElementIndex].classList.add('quote');
-      }
-
-      const element = elements[currentElementIndex];
-      const text = texts[currentElementIndex];
-      if (currentCharIndex < text.length) {
-        element.appendChild(document.createTextNode(text.charAt(currentCharIndex)));
-        currentCharIndex++;
-        
-        setTimeout(type, Math.random()*10+35);
-      } else {
-        currentElementIndex++;
-        currentCharIndex = 0;
-        setTimeout(type, 250);
-      }
-    }
-    type();
-  });
-</script>
-
   </head>
   <body>
+    <a class="skip-link" href="#profile-items">Skip to links</a>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Maxim's homepage">mqxym<span aria-hidden="true">.</span></a>
+      <div class="theme-picker" role="group" aria-label="Color theme" hidden>
+        <button type="button" data-theme-choice="system" aria-pressed="true">Auto</button>
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </header>
     <main class="h-card">
+      <section class="hero" aria-labelledby="intro-title">
+      <div class="profile">
       <div id="profile-picture-container">
-        <img class="u-photo" alt="maxim" id="profile-picture" src="assets/profile-picture">
+        <img class="u-photo" alt="Maxim" id="profile-picture" src="assets/profile-picture" width="144" height="144">
       </div>
       <h1 class="p-name" id="name">
-        🏝️ Maxim <a id="verification" style="text-decoration: none; border: 0;" href="https://home.omg.lol/lookup/maxim"><i class="omg-icon omg-verified"></i></a>
+        Maxim <a id="verification" aria-label="View Maxim's verified omg.lol profile" href="https://home.omg.lol/lookup/maxim"><i class="omg-icon omg-verified" aria-hidden="true"></i></a>
       </h1>
       <div class="metadata" id="pronouns">
         he/him
@@ -92,28 +56,35 @@
       <div class="metadata p-region" id="location">
         <i class="fa-solid fa-fw fa-location-dot"></i> Germany
       </div>
+      <div class="profile-note"><span aria-hidden="true"></span> Learning as I go.</div>
+      </div>
       <div class="p-note" id="bio">
-        <p>
-          * omg lol you found my profile? *
-        </p>
-        <h2>Welcome!</h2>
+        <p class="eyebrow">Hi, I'm Maxim.</p>
+        <h2 id="intro-title">Code, music and<br><span>curiosity.</span></h2>
         <p>
           I'm interested in new technologies, coding, vinyl, strategy games, music production and hip-hop.
         </p>
         <blockquote>
-          <h3>
+          <p>
             Fly around the world on a beat is what I really want.
-          </h3>
+          </p>
         </blockquote>
         <p>
-          Visit my Spotify, YouTube or Soundcloud for my music. Check out my GitHub for my coding projects.
+          You can find some of my music on Spotify, YouTube and SoundCloud, and my coding projects on GitHub.
         </p>
         <p>
-          Messages for ideas, questions or other inquiries on any platform are much appreciated :)
+          Feel free to say hello or get in touch with an idea or question :)
         </p>
       </div>
-      <div id="profile-items">
-        <h3>
+      </section>
+      <section class="links-section" aria-labelledby="links-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">My links</p><h2 id="links-title">Around the web<span>.</span></h2></div>
+          <span class="section-note">Music, projects and other bits.</span>
+        </div>
+      <div id="profile-items" tabindex="-1">
+        <section class="link-group music" aria-labelledby="music-title">
+        <h3 id="music-title">
           Music
         </h3>
         <ul class="fa-ul">
@@ -127,7 +98,9 @@
             <span class="fa-li"><i class="fa-brands fa-youtube"></i></span><a class="u-url" rel="me" href="https://www.youtube.com/@mQxYm">Youtube</a>
           </li>
         </ul>
-        <h3>
+        </section>
+        <section class="link-group coding" aria-labelledby="coding-title">
+        <h3 id="coding-title">
           Coding
         </h3>
         <ul class="fa-ul">
@@ -138,13 +111,28 @@
             <span class="fa-li"><i class="fa-solid fa-link"></i></span><a class="u-url" rel="me" href="https://pastebin.com/u/mqxym">Pastebin</a>
           </li>
         </ul>
-        <h3>
-          Socials
+        </section>
+        <section class="link-group gaming" aria-labelledby="gaming-title">
+        <h3 id="gaming-title">
+          Gaming
         </h3>
         <ul class="fa-ul">
           <li>
-            <span class="fa-li"><i class="fa-solid fa-link"></i></span><a class="u-url" rel="me" href="https://ask.fm/mqxym8?utm_source=copy_link&amp;utm_medium=iOS&amp;shareBy=mqxym8">Ask.FM</a>
+            <span class="fa-li"><i class="fa-brands fa-discord"></i></span><a class="u-url" rel="me" href="https://discordapp.com/users/1221089003932225667">Discord</a>
           </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-steam"></i></span><a class="u-url" rel="me" href="https://steamcommunity.com/id/mqxym/">Steam</a>
+          </li>
+          <li>
+            <span class="fa-li"><i class="fa-brands fa-twitch"></i></span><a class="u-url" rel="me" href="https://www.twitch.tv/m69x96m">Twitch</a>
+          </li>
+        </ul>
+        </section>
+        <section class="link-group socials" aria-labelledby="socials-title">
+        <h3 id="socials-title">
+          Socials
+        </h3>
+        <ul class="fa-ul">
           <li>
             <span class="fa-li"><i class="fa-brands fa-instagram"></i></span><a class="u-url" rel="me" href="https://www.instagram.com/mqxym">Instagram</a>
           </li>
@@ -152,7 +140,7 @@
             <span class="fa-li"><i class="omg-icon omg-x-com"></i></span><a class="u-url" rel="me" href="https://x.com/mqxym77">X</a>
           </li>
           <li>
-            <span class="fa-li"><i class="fa-brands fa-tiktok"></i></span><a class="u-url" rel="me" href="www.tiktok.com/@mqxym9999">TikTok</a>
+            <span class="fa-li"><i class="fa-brands fa-tiktok"></i></span><a class="u-url" rel="me" href="https://www.tiktok.com/@mqxym9999">TikTok</a>
           </li>
           <li>
             <span class="fa-li"><i class="fa-brands fa-facebook"></i></span><a class="u-url" rel="me" href="https://www.facebook.com/maxim.schulz.zb">Facebook</a>
@@ -167,21 +155,9 @@
             <span class="fa-li"><i class="fa-brands fa-reddit"></i></span><a class="u-url" rel="me" href="https://www.reddit.com/u/Wackelkontakt/">Reddit</a>
           </li>
         </ul>
-        <h3>
-          Gaming
-        </h3>
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fa-brands fa-discord"></i></span><a class="u-url" rel="me" href="https://discordapp.com/users/1221089003932225667">Discord</a>
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-brands fa-steam"></i></span><a class="u-url" rel="me" href="https://steamcommunity.com/id/mqxym/">Steam</a>
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-brands fa-twitch"></i></span><a class="u-url" rel="me" href="https://www.twitch.tv/m69x96m">Twitch</a>
-          </li>
-        </ul>
-        <h3>
+        </section>
+        <section class="link-group more-socials" aria-labelledby="more-title">
+        <h3 id="more-title">
           More Socials
         </h3>
         <ul class="fa-ul">
@@ -201,8 +177,10 @@
             <span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a rel="me" class="u-email" href="mailto:maxim@omg.lol">maxim@omg.lol</a>
           </li>
         </ul>
+        </section>
       </div>
-      <div id="footer"></div>
+      </section>
+      <footer id="footer"><span>Thanks for stopping by.</span><span>Maxim / mqxym</span></footer>
     </main>
   </body>
 </html>
