@@ -49,13 +49,21 @@ function glitch(el, duration = 450) {
 }
 
 function glitchLoop() {
-  const targets = [$(".wordmark .glitch"), $(".title-accent"), $("#profile-picture-container")];
+  const targets = [$(".wordmark .glitch"), $(".title-accent")];
   const tick = () => {
     const pool = scene ? [...targets, scene.canvas] : targets;
     glitch(pool[Math.floor(Math.random() * pool.length)]);
     gsap.delayedCall(gsap.utils.random(2.2, 5.5), tick);
   };
   gsap.delayedCall(3, tick);
+
+  const photo = $("#profile-picture-container");
+  if (!photo) return;
+  const photoTick = () => {
+    glitch(photo);
+    gsap.delayedCall(gsap.utils.random(3, 6), photoTick);
+  };
+  gsap.delayedCall(gsap.utils.random(3, 6), photoTick);
 }
 
 /* ------------------------------------------------------------------ boot */
